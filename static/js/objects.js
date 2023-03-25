@@ -138,7 +138,9 @@ var cnt = 0;
 
 while (contains(Object.values(TRAPS).map(trap => trap[1]).flat(), 2) === false) {
     if (caves_cordinates[cnt][1].length !== 0 && caves_cordinates[cnt][1][0].length !== 0) {
-        draw_objects(caves_cordinates[cnt][1][0], caves_cordinates[cnt][1][1], caves_cordinates[cnt][0], "143px", "153px");
+        card_to_continue.addEventListener('click', function() {
+            draw_objects(caves_cordinates[cnt][1][0], caves_cordinates[cnt][1][1], caves_cordinates[cnt][0], "143px", "153px");
+        });    
     }
     var keys_traps = caves_cordinates[cnt][0].substring(caves_cordinates[cnt][0].lastIndexOf("/") + 1, caves_cordinates[cnt][0].indexOf("_", caves_cordinates[cnt][0].lastIndexOf("/") + 1));
     try {
